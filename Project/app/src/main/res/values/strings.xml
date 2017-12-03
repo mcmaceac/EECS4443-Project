@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="participantTextView">Participant Code</string>
+    <string name="setup_title">One Handed Text Entry</string>
+    <string name="setup_subtitle">Setup Parameters</string>
+    <string name="ok">Ok</string>
+    <string name="save">Save</string>
+    <string name="exit">Exit</string>
+</resources>
