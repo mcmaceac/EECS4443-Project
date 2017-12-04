@@ -105,7 +105,7 @@ public class Setup extends Activity implements View.OnClickListener {
             Intent i = new Intent(getApplicationContext(), TextEntry.class);
             i.putExtras(b);
             startActivity(i);
-            finish();
+            //finish();
         }
         else if (v == save) {
             spe = sp.edit();
