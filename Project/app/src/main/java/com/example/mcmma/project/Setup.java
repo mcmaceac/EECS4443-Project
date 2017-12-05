@@ -94,7 +94,7 @@ public class Setup extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 
         if (v == ok) {
-            Bundle b = new Bundle();
+            Bundle b = getIntent().getExtras();
             b.putString("participantCode", participantCode[spinParticipantCode.getSelectedItemPosition()]);
             b.putString("sessionCode", sessionCode[spinSessionCode.getSelectedItemPosition()]);
             b.putString("groupCode", groupCode[spinGroupCode.getSelectedItemPosition()]);

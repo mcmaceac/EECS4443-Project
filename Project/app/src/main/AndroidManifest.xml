@@ -2,13 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mcmma.project">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name=".Setup">
+        <activity android:name=".Survey">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TextEntry">
+        </activity>
+        <activity android:name=".Setup">
         </activity>
     </application>
 
