@@ -149,7 +149,7 @@ public class TextEntry extends Activity {
         Log.i("MYDEBUG", inputMode);
 
         if (inputMode.equals("Tap")) {
-            sb.append("You are currently in the Swype portion of the user study! You should be using "+
+            sb.append("You are currently in the tap portion of the user study! You should be using "+
                     "one hand to input the text shown at the top of the screen " +
                     "using the tap (regular) method for this portion.\n\n");
             sb.append("Please note that you will be timed. The timer begins when you tap the text entry" +
