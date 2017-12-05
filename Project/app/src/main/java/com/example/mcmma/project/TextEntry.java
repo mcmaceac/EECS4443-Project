@@ -214,11 +214,6 @@ public class TextEntry extends Activity {
         String age = b.getString("age");
         String usedSwype = b.getString("swype");
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-            requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-        }
-
         File dataDirectory = new File(Environment.getExternalStorageDirectory() + File.separator + "ProjectData");
 
         boolean success = true;

@@ -2,6 +2,7 @@ package com.example.mcmma.project;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +30,12 @@ public class Survey extends Activity {
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.survey);
+
+        //used to request file writing permission in SDK version 23 and higher
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            requestPermissions(new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        }
 
         spinDominantHand = (Spinner)findViewById(R.id.spinDominantHand);
         spinGender = (Spinner)findViewById(R.id.spinGender);
