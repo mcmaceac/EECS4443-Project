@@ -1,7 +1,9 @@
 package com.example.mcmma.project;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -44,8 +46,18 @@ public class Survey extends Activity {
         spinSwype.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+
+                //launch a tutorial youtube video if the user has never used Swype before
                 if (spinSwype.getSelectedItem().toString() == "No") {
                     Log.i("MYDEBUG", "No Selected");
+                    Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:SJ-RAefCG_c"));
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                            Uri.parse("https://www.youtube.com/watch?v=SJ-RAefCG_c"));
+                    try {
+                        getApplicationContext().startActivity(appIntent);
+                    } catch (ActivityNotFoundException ex) {
+                        getApplicationContext().startActivity(webIntent);
+                    }
                 }
             }
 
