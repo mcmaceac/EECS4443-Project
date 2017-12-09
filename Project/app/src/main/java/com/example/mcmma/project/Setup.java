@@ -38,18 +38,10 @@ public class Setup extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_setup);
 
         ok = (Button)findViewById(R.id.ok);
-        save = (Button)findViewById(R.id.save);
+        //save = (Button)findViewById(R.id.save);
         exit = (Button)findViewById(R.id.exit);
 
         sp = this.getPreferences(MODE_PRIVATE);
-
-        participantCode[0] = sp.getString("participantCode", participantCode[0]);
-        sessionCode[0] = sp.getString("sessionCode", sessionCode[0]);
-        // block code initialized in main activity (based on existing filenames)
-        groupCode[0] = sp.getString("groupCode", groupCode[0]);
-        numberOfPhrases[0] = sp.getString("numberOfPhrases", numberOfPhrases[0]);
-        phrasesFileArray[0] = sp.getString("phrasesFile", phrasesFileArray[0]);
-        entryModeArray[0] = sp.getString("entryMode", entryModeArray[0]);
 
         spinParticipantCode = (Spinner)findViewById(R.id.spinParticipantCode);
         spinSessionCode = (Spinner)findViewById(R.id.spinSessionCode);
